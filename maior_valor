@@ -1,0 +1,13 @@
+def maior_valor(lista)
+    maior = lista[0]
+
+    for i in 1...lista.length
+        if lista[i] > maior
+            maior = lista[i]
+        end          
+    end
+    puts "O maior valor é: #{maior}"
+end
+
+numeros = [9,5,8,6,7,3]
+maior_valor(numeros)
