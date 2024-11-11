@@ -1,13 +1,22 @@
+# Função para encontrar o maior valor em uma lista
 def maior_valor(lista)
+    # Inicializa a variável 'maior' com o primeiro valor da lista
     maior = lista[0]
 
-    for i in 1...lista.length
-        if lista[i] > maior
-            maior = lista[i]
+    # Itera sobre cada elemento da lista (exceto o primeiro, pois já está em 'maior')
+    lista.each do |numero|
+        # Verifica se o elemento atual é maior que o valor atual de 'maior'
+        if numero > maior
+            # Se for, atualiza 'maior' para o novo valor maior encontrado
+            maior = nuemro
         end          
     end
+    # Exibe o maior valor encontrado
     puts "O maior valor é: #{maior}"
 end
 
+# Define uma lista de números para testar a função
 numeros = [9,5,8,6,7,3]
+
+# Chama a função 'maior_valor' passando a lista 'numeros'
 maior_valor(numeros)
