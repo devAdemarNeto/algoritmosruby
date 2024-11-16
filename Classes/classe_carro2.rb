@@ -1,11 +1,11 @@
 class Carro
     def initialize (marca,modelo)
-        @marca = "Toyota"
-        @modelo = "Corolla"
+        @marca = marca
+        @modelo = modelo
     end
 
-    def atualizar 
-        @modelo = "Etios"
+    def atualizar (modelo2)
+        @modelo2 = modelo2
     end
 end
 
