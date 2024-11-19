@@ -1,22 +1,30 @@
 class Pessoa
-    def initialize (nome, idade)
+    def initialize (nome, idade, ano_nascimento)
         @nome = nome
         @idade = idade
+        @ano_nascimento = ano_nascimento
     end
 
-    def detalhes
-        "Nome: #{@nome}, Idade: #{@idade}"
+    def informacao
+        "Meu nome é #{nome}, e tenho #{idade} anos"
     end
+
+    def calcular_idade
+        ano_atual = Time.now.year
+        idade_atual = ano_atual - @ano_nascimento
+        idade_atual
+    end
+
 end
- 
-lista_pessoas = []
 
-pessoa1 = Pessoa.new("Neto",37)
-pessoa2 = Pessoa.new("Ademar", 38)
+class Cadasdro
+    def initialize
+        @alunos = []
+    end
 
-lista_pessoas.push(pessoa1.pessoa2)
+    def adicionar_aluno(pessoa)
+        @alunos << pessoa
+    end
 
-
-lista_pessoas.each do |pessoa|
-    puts pessoa.detalhes
-end
+    def romover_aluno(nome)
+        
