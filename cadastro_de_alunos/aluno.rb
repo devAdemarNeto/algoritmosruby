@@ -17,14 +17,26 @@ class Pessoa
 
 end
 
-class Cadasdro
-    def initialize
-        @alunos = []
-    end
+pessoa1 = Pessoa.new("Neto",37,1987)
+pessoa2 = Pessoa.new("Thaiane", 31, 1993)
+puts pessoa1.informacao
+puts pessoa1.calcular_idade
+puts pessoa2.informacao
+puts pessoa2.calcular_idade
 
-    def adicionar_aluno(pessoa)
-        @alunos << pessoa
-    end
+alunos = []
 
-    def romover_aluno(nome)
-        
+alunos << Pessoa.new("Neto",37,1987)
+alunos << Pessoa.new("Thaiane",31,1993)
+
+alunos.each do |aluno|
+    puts aluno.informacao
+end
+
+alunos.delete_if {|aluno| aluno.instance_variable_get(:@nome) == "Neto"}
+
+def adicionar_aluno(nome,idade,ano_nascimento, alunos)
+    alunos << Pessoa.new(nome,idade, ano_nascimento)
+end
+
+adicionar_aluno("João",25,1999,alunos)
