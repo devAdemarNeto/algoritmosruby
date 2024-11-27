@@ -1,0 +1,7 @@
+nomes = ["Ana", "João", "Bia", "Carlos", "Eva"]
+
+maior3 = nomes.select {|nome| nome.length > 3}
+
+maiusculas = maior3.map {|maiuscula| maiuscula.upcase}
+
+puts maiusculas.inspect
